@@ -4,57 +4,74 @@ using UnityEngine;
 
 public class introManager : MonoBehaviour {
 
-    public GameObject[] text;
+    public GameObject text;
     public GameObject[] button;
     public GameObject panelToDis;
     public GameObject panelToAct;
     public Animation anim;
-    public AnimationClip inAnim;
-    public AnimationClip outAnim;
+    public AnimationClip inText;
+    public AnimationClip outText;
+    public AnimationClip inButton;
+    public AnimationClip outButton;
+    public bool beginning;
+    
 
-    IEnumerator disablePanel()
+    public IEnumerator disablePanel()
     {
         yield return new WaitForSeconds(1.2f);
     }
 
-    void fadeInText(GameObject[] target)
+    public void fadeInText(GameObject target)
     {
-        for(int i = 0; i < text.Length; i++)
-        {
             anim.Play("inText");
-        }
+        
     }
 
-    void fadeOutText(GameObject[] target)
+    public void fadeOutText(GameObject target)
     {
-        for (int i = 0; i < text.Length; i++)
-        {
             anim.Play("outText");
-        }
+        
     }
 
-    void fadeInButton(GameObject[] target)
+    public void fadeInButton(GameObject[] target)
     {
-        for (int i = 0; i < text.Length; i++)
+        for (int i = 0; i < button.Length; i++)
         {
             anim.Play("inButton");
         }
     }
 
-    void fadeOutButton(GameObject[] target)
+    public void fadeOutButton(GameObject[] target)
     {
-        for (int i = 0; i < text.Length; i++)
+        for (int i = 0; i < button.Length; i++)
         {
             anim.Play("outButton");
         }
     }
 
-	void Awake () {
-        anim = GetComponent<Animation>();
-        anim.AddClip(inAnim, "inText");
-        anim.AddClip(outAnim, "outText");
-        anim.AddClip(inAnim, "inButton");
-        anim.AddClip(outAnim, "outButton");
+    public IEnumerator destroyThis()
+    {
+        yield return new WaitForSeconds(8);
+        Destroy(this);
+    }
+
+    public void startText()
+    {
+        if(beginning == true)
+        {
+            anim.Play("start");
+            beginning = false;
+            StartCoroutine(destroyThis());
+        }
+    }
+
+	public void Awake () {
+        //anim = GetComponent<Animation>();
+        anim.AddClip(inText, "inText");
+        anim.AddClip(outText, "outText");
+        anim.AddClip(inButton, "inButton");
+        anim.AddClip(outButton, "outButton");
+
     }
 
 }

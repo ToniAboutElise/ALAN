@@ -313,8 +313,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100285862}
-  m_LocalRotation: {x: -0.09458703, y: 0.40012237, z: 0.04156138, w: 0.9106196}
-  m_LocalPosition: {x: 86.06293, y: -0.020553589, z: -113.17189}
+  m_LocalRotation: {x: -0.0115309525, y: -0.2768167, z: 0.0033211731, w: -0.96084785}
+  m_LocalPosition: {x: 86.4344, y: -93.73201, z: -347.3119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -560,13 +560,14 @@ GameObject:
   - component: {fileID: 221997735}
   - component: {fileID: 221997737}
   - component: {fileID: 221997736}
+  - component: {fileID: 221997738}
   m_Layer: 5
   m_Name: PanelQuote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &221997735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -619,6 +620,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221997734}
+--- !u!95 &221997738
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221997734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9a69003c1235584a84707704ded824a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &223955339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1025,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 357192451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 545646867}
+        m_MethodName: fadeOutText
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1393882597}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 545646866}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &357192451
@@ -1689,6 +1729,59 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532985716}
   m_Mesh: {fileID: 4300006, guid: 6950a1d0b175378419dc925efca50946, type: 3}
+--- !u!1 &545646866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 545646868}
+  - component: {fileID: 545646867}
+  m_Layer: 0
+  m_Name: introManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &545646867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545646866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b26ae454805017438519a46b49c6445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  button:
+  - {fileID: 357192449}
+  - {fileID: 1366915393}
+  - {fileID: 1021752600}
+  panelToDis: {fileID: 0}
+  panelToAct: {fileID: 0}
+  anim: {fileID: 1393882601}
+  inText: {fileID: 7400000, guid: 47f6cc8121b356b40a5d05e370750ede, type: 2}
+  outText: {fileID: 7400000, guid: 252dd4e0afb5ecc4caea3d6659089398, type: 2}
+  inButton: {fileID: 0}
+  outButton: {fileID: 0}
+  beginning: 0
+--- !u!4 &545646868
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545646866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.94202, y: -5.133582, z: 39.143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553462317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,7 +2888,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1845685480
+  randomSeed: 1869725027
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6310,7 +6403,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 357192449}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &1150201793
@@ -6894,6 +6987,7 @@ GameObject:
   - component: {fileID: 1393882598}
   - component: {fileID: 1393882600}
   - component: {fileID: 1393882599}
+  - component: {fileID: 1393882601}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6965,6 +7059,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393882597}
+--- !u!111 &1393882601
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1393882597}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 47f6cc8121b356b40a5d05e370750ede, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 47f6cc8121b356b40a5d05e370750ede, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1427576433
 GameObject:
   m_ObjectHideFlags: 0
@@ -7276,7 +7385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1523827947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8383,7 +8492,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 257956402
+  randomSeed: -578466166
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11723,8 +11832,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2029508277}
-  m_LocalRotation: {x: 0.0064960713, y: 0.15346165, z: -0.016870178, w: -0.98798925}
-  m_LocalPosition: {x: 232.3099, y: 12.827097, z: 25.749805}
+  m_LocalRotation: {x: -0.011530952, y: -0.27681667, z: 0.003321173, w: -0.9608478}
+  m_LocalPosition: {x: 86.4344, y: -93.73201, z: -347.3119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
