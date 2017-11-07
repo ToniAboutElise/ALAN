@@ -5,21 +5,32 @@ using UnityEngine;
 public class introManager : MonoBehaviour {
 
     public GameObject text;
-    public GameObject[] button;
+    public GameObject button;
     public GameObject panelToDis;
     public GameObject panelToAct;
     public Animation anim;
+    public Animation animButton;
     public AnimationClip inText;
     public AnimationClip outText;
     public AnimationClip inButton;
     public AnimationClip outButton;
+    public AnimationClip buttonsDown;
     public bool beginning;
     
 
     public IEnumerator disablePanel()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(6);
+        panelToAct.SetActive(true);
+        panelToDis.SetActive(false);
     }
+
+    public void buttonsGoDown()
+    {
+        animButton.Play("buttonsDown");
+        StartCoroutine(disablePanel());
+    }
+
 
     public void fadeInText(GameObject target)
     {
@@ -27,12 +38,14 @@ public class introManager : MonoBehaviour {
         
     }
 
+
+
     public void fadeOutText(GameObject target)
     {
             anim.Play("outText");
         
     }
-
+    /*
     public void fadeInButton(GameObject[] target)
     {
         for (int i = 0; i < button.Length; i++)
@@ -40,6 +53,7 @@ public class introManager : MonoBehaviour {
             anim.Play("inButton");
         }
     }
+    
 
     public void fadeOutButton(GameObject[] target)
     {
@@ -48,7 +62,7 @@ public class introManager : MonoBehaviour {
             anim.Play("outButton");
         }
     }
-
+    */
     public IEnumerator destroyThis()
     {
         yield return new WaitForSeconds(8);
@@ -66,11 +80,11 @@ public class introManager : MonoBehaviour {
     }
 
 	public void Awake () {
-        //anim = GetComponent<Animation>();
         anim.AddClip(inText, "inText");
         anim.AddClip(outText, "outText");
         anim.AddClip(inButton, "inButton");
         anim.AddClip(outButton, "outButton");
+        animButton.AddClip(buttonsDown, "buttonsDown");
 
     }
 
