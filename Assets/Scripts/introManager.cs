@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class introManager : MonoBehaviour {
 
+    public bool playUp;
     public GameObject text;
-    public GameObject button;
+    public GameObject buttonContainer;
+    public GameObject[] button;
     public GameObject panelToDis;
     public GameObject panelToAct;
     public Animation anim;
@@ -21,8 +25,16 @@ public class introManager : MonoBehaviour {
     public IEnumerator disablePanel()
     {
         yield return new WaitForSeconds(6);
-        panelToAct.SetActive(true);
         panelToDis.SetActive(false);
+        panelToAct.SetActive(true);
+        text.GetComponent<Animation>().enabled = true;
+        buttonContainer.GetComponent<Animation>().enabled = true;
+        panelToDis.SetActive(false);
+        foreach (GameObject go in button)
+        {
+            go.GetComponent<Button>().enabled = false;
+        }
+        anim.Play("buttonsUp");
     }
 
     public void buttonsGoDown()
@@ -45,24 +57,7 @@ public class introManager : MonoBehaviour {
             anim.Play("outText");
         
     }
-    /*
-    public void fadeInButton(GameObject[] target)
-    {
-        for (int i = 0; i < button.Length; i++)
-        {
-            anim.Play("inButton");
-        }
-    }
-    
-
-    public void fadeOutButton(GameObject[] target)
-    {
-        for (int i = 0; i < button.Length; i++)
-        {
-            anim.Play("outButton");
-        }
-    }
-    */
+ 
     public IEnumerator destroyThis()
     {
         yield return new WaitForSeconds(8);
@@ -79,13 +74,24 @@ public class introManager : MonoBehaviour {
         }
     }
 
+    public void buttonsUp()
+    {
+        animButton.Play("buttonsUp");
+    }
+
 	public void Awake () {
         anim.AddClip(inText, "inText");
         anim.AddClip(outText, "outText");
         anim.AddClip(inButton, "inButton");
         anim.AddClip(outButton, "outButton");
         animButton.AddClip(buttonsDown, "buttonsDown");
+        text.GetComponent<Animation>().enabled = false;
+        buttonContainer.GetComponent<Animation>().enabled = true;
+        foreach (GameObject go in button) { 
+            go.GetComponent<Button>().enabled = false;
+        }
 
     }
+
 
 }
