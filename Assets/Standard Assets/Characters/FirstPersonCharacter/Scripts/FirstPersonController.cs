@@ -55,6 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -130,7 +131,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            //m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -255,5 +256,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+        void OnTriggerStay(Collider other)
+        {
+            if(other.tag == "interactiveObject" && Input.GetMouseButtonDown(0))
+            {
+                m_WalkSpeed = 0f;
+                m_JumpSpeed = 0f;
+                m_MouseLook.XSensitivity = 0;
+                m_MouseLook.YSensitivity = 0;
+            }  
+            
+            if(other.tag == "interactiveObject" && Input.GetMouseButton(1))
+                {
+                    m_WalkSpeed = 10f;
+                    m_JumpSpeed = 10f;
+                m_MouseLook.XSensitivity = 2;
+                m_MouseLook.YSensitivity = 2;
+            }
+            }
+
+
+        }
+
     }
-}
