@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/terrain.unity
     guid: c145409dc96fd9648ae7fa7b25e2d1cb
   - enabled: 1
-    path: Assets/Scenes/try2.unity
+    path: Assets/Scenes/Island.unity
     guid: ba358c7cb9d35db429fc62921e04ea23
