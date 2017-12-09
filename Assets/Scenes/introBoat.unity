@@ -2476,7 +2476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &773668148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7804,7 +7804,7 @@ MonoBehaviour:
     palabras que tu padre te dijo hace tiempo, cuando\nten\xEDas 8 a\xF1os. Te dijo:
     \"cuando fui militar, tuve que ir a Aron Island de servicio. Dicen que en\nesa
     isla, todo el mundo descubre qui\xE9n es en realidad. Es una forma de despejar
-    la mente.\nAs\xED decid\xED a sentar la cabeza y el resultado fue tu nacimiento\".
+    la mente.\nAs\xED decid\xED asentar la cabeza y el resultado fue tu nacimiento\".
     Cuando tu padre termin\xF3 de\ncontarte esa historia, tu..."
 --- !u!222 &1393882600
 CanvasRenderer:
