@@ -288,8 +288,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Lo s\xE9, hijo. Lo siento. El velatorio es esta tarde, a las 18:00, en
-    el tanatorio del pueblo."
+  m_Text: "Lo s\xE9, hijo. Lo siento. Espero que alg\xFAn d\xEDa puedas perdonarme.
+    El velatorio es esta tarde, a las 18:00, en \nel tanatorio del pueblo."
 --- !u!222 &93536201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5253,8 +5253,9 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Hijo... s\xE9 que esto no es f\xE1cil para ti... No quer\xEDa que sufrieras,
-    llevo una semana esperando a que le \nencontrasen. Desgraciadamente, todo termina
-    de esta manera. No quer\xEDa preocuparte hasta que no \nterminase todo."
+    llevo una semana esperando a que le \nencontrasen. No quer\xEDa preocuparte hasta
+    que no terminase todo. Ahora me doy cuenta de que ha\nsido un error. Por favor,
+    Lucas, perd\xF3name."
 --- !u!222 &1694824583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5919,10 +5920,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Es tu padre... ha fallecido. Estaba en una expedici\xF3n en Aron Island.
-    Ya sabes, ese reality que estaba \ngrabando. Zarparon hacia la isla pero... no
-    pudieron llegar a la orilla. Iban en una lancha y parece ser \nque el motor se
-    estrope\xF3. "
+  m_Text: "Es tu padre... ha fallecido. Estaba volviendo de una expedici\xF3n. Ya
+    sabes, ese reality que estaba \ngrabando. Zarparon hacia la isla pero... al volver,
+    antes de llegar al puerto, tu padre sufri\xF3 un\nataque al coraz\xF3n."
 --- !u!222 &1883397526
 CanvasRenderer:
   m_ObjectHideFlags: 0
