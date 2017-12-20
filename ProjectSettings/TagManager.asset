@@ -8,6 +8,7 @@ TagManager:
   - interact
   - interactArea
   - interactiveObject
+  - puzzle
   layers:
   - Default
   - TransparentFX
