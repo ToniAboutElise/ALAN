@@ -13,6 +13,11 @@ public class rotateColumns : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        if (other.name == "collisionDoor")
+        {
+            GetComponent<BoxCollider>().enabled = false;
+            other.GetComponent<BoxCollider>().enabled = false;
+        }
 
         if (other.tag == "interactArea" && Input.GetMouseButton(0))
         {
