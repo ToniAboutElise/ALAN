@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class changeEmissive : MonoBehaviour {
+    public bool changedEmissive;
 
+    void Start()
+    {
+        changedEmissive = false;
+    }
 	
     void EntersEmissiveColor()
     {
@@ -12,6 +17,7 @@ public class changeEmissive : MonoBehaviour {
         //rend.material.SetColor("__MainColor", Color.white);
         //rend.material.SetColor("__EmissiveColor", Color.white);
         rend.material.SetFloat("_Shininess", 0f);
+        changedEmissive = true;
     }
 
     void ExitsEmissiveColor()
@@ -21,6 +27,7 @@ public class changeEmissive : MonoBehaviour {
         //rend.material.SetColor("__MainColor", Color.red);
         //rend.material.SetColor("__EmissiveColor", Color.white);
         rend.material.SetFloat("_Shininess", 1f);
+        changedEmissive = false;
     }
 
     void OnTriggerEnter (Collider other) {

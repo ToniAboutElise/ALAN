@@ -9,6 +9,10 @@ TagManager:
   - interactArea
   - interactiveObject
   - puzzle
+  - trigger1
+  - trigger2
+  - trigger3
+  - trigger4
   layers:
   - Default
   - TransparentFX
