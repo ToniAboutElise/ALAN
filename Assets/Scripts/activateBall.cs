@@ -10,6 +10,10 @@ public class activateBall : MonoBehaviour {
     bool t4;
     public GameObject act;
     public GameObject deact;
+    public GameObject doorAct;
+    public GameObject doorDeact;
+
+    public bool openDoor;
 
     void Start()
     {
@@ -75,6 +79,13 @@ public class activateBall : MonoBehaviour {
         {
             act.SetActive(true);
             deact.SetActive(false);
+            if (openDoor)
+            {
+                doorDeact.SetActive(false);
+                doorAct.SetActive(true);
+                doorAct.GetComponent<Animation>().Play();
+                openDoor = false;
+            }
         }
 	}
 }

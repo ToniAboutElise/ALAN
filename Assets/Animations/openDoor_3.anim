@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: openDoor_1
+  m_Name: openDoor_3
   serializedVersion: 6
   m_Legacy: 1
   m_Compressed: 0
@@ -19,13 +19,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -1.0286905, y: -0.6746289, z: 0}
+        value: {x: -0.28423873, y: -0.6746282, z: 0.5376153}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 3.0333333
-        value: {x: -1.0286905, y: -1.62, z: 0}
+        time: 2.9333334
+        value: {x: -0.28423873, y: -1.44, z: 0.5376153}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -49,12 +49,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.0333333
+    m_StopTime: 2.9333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -70,7 +70,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -1.0286905
+        value: -0.28423873
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9333334
+        value: -0.28423873
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -86,13 +92,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -0.6746289
+        value: -0.6746282
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 3.0333333
-        value: -1.62
+        time: 2.9333334
+        value: -1.44
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -108,7 +114,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0
+        value: 0.5376153
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9333334
+        value: 0.5376153
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -120,7 +132,7 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events: []

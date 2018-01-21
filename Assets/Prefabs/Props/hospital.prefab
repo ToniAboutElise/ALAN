@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 23979415086453264}
   - component: {fileID: 64250627034206320}
   m_Layer: 0
-  m_Name: Cube_004
+  m_Name: room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1063,8 +1063,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631128287749898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 224.22, y: 124.47, z: 30.004}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 476.47318, y: 125.6, z: 47.87}
   m_LocalScale: {x: 3.0756211, y: 3.0756207, z: 3.0756207}
   m_Children:
   - {fileID: 4919927503684074}
@@ -1085,7 +1085,7 @@ Transform:
   - {fileID: 4773615854399828}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4172730893120748
 Transform:
   m_ObjectHideFlags: 1
@@ -2718,14 +2718,14 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
+  m_AutoUVMaxAngle: 71.7
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
