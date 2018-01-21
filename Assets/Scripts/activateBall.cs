@@ -55,21 +55,25 @@ public class activateBall : MonoBehaviour {
         if (other.tag == "trigger1")
         {
             t1 = false;
+            Debug.Log("exit1");
         }
 
         if (other.tag == "trigger2")
         {
             t2 = false;
+            Debug.Log("exit2");
         }
 
         if (other.tag == "trigger3")
         {
             t3 = false;
+            Debug.Log("exit3");
         }
 
         if (other.tag == "trigger4")
         {
             t4 = false;
+            Debug.Log("exit4");
         }
     }
 
