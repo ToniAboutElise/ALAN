@@ -7,6 +7,7 @@ public class playAnimsOnClick : MonoBehaviour {
     public GameObject[] objToAnim;
     public GameObject objToAct;
     public GameObject objToDeact;
+    public GameObject soundActivator;
 
     public bool openDoor;
     bool notAnim;
@@ -27,8 +28,9 @@ public class playAnimsOnClick : MonoBehaviour {
             for (int i = 0; i <= objToAnim.Length; i++) {
                 
                 objToAnim[i].GetComponent<Animation>().Play();
-            notAnim = true;
-            Debug.Log("Playing");
+                soundActivator.SetActive(true);
+                notAnim = true;
+                Debug.Log("Playing");
             }
         }
     }

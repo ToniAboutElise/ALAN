@@ -12,6 +12,7 @@ public class activateBall : MonoBehaviour {
     public GameObject deact;
     public GameObject doorAct;
     public GameObject doorDeact;
+    public GameObject soundActivator;
 
     public bool openDoor;
 
@@ -89,6 +90,7 @@ public class activateBall : MonoBehaviour {
                 doorAct.SetActive(true);
                 doorAct.GetComponent<Animation>().Play();
                 openDoor = false;
+                soundActivator.SetActive(true);
             }
         }
 	}
