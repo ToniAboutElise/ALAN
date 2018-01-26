@@ -10,7 +10,6 @@ public class soundManager : MonoBehaviour {
     public AudioSource[] myAudio;
     int sound;
     bool activateDialogue;
-    public int compare;
     public GameObject deact;
 
     void Start()
@@ -26,8 +25,6 @@ public class soundManager : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log(sound);
-        Debug.Log(compare);
         if (activateDialogue)
         {
             myText[sound].SetActive(true);
@@ -41,7 +38,7 @@ public class soundManager : MonoBehaviour {
                 myAudio[sound].Stop();
                 StartCoroutine(waitSound());
 
-                if(sound == compare)
+                if(sound == myAudio.Length - 1)
                 {
                     activateDialogue = false;
                 }else
