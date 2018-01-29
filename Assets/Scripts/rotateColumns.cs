@@ -24,7 +24,7 @@ public class rotateColumns : MonoBehaviour
         if (other.tag == "interactArea" && Input.GetMouseButton(0) && invert)
         {
             transform.Rotate(Xrotation * Time.deltaTime, Yrotation * Time.deltaTime, Zrotation * Time.deltaTime);
-            for(int i = 0; i <= columnToRotate.Length; i++) { 
+            for(int i = 0; i < columnToRotate.Length; i++) { 
             columnToRotate[i].transform.Rotate(Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, Zrotation * Time.deltaTime);
             columnToRotateInvert.transform.Rotate(Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, -Zrotation * Time.deltaTime);
 
@@ -36,12 +36,12 @@ public class rotateColumns : MonoBehaviour
         if (other.tag == "interactArea" && Input.GetMouseButton(0) && !invert)
         {
             transform.Rotate(Xrotation * Time.deltaTime, Yrotation * Time.deltaTime, Zrotation * Time.deltaTime);
-            for (int i = 0; i <= columnToRotate.Length; i++)
+            for (int i = 0; i < columnToRotate.Length; i++)
             {
                 columnToRotate[i].transform.Rotate(Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, Zrotation * Time.deltaTime);
 
             }
-            columnToRotateInvert.transform.Rotate(Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, -Zrotation * Time.deltaTime);
+           // columnToRotateInvert.transform.Rotate(Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, -Zrotation * Time.deltaTime);
 
         }
 

@@ -25,7 +25,7 @@ public class playAnimsOnClick : MonoBehaviour {
                 objToAct.SetActive(true);
                 objToDeact.SetActive(false);
             }
-            for (int i = 0; i <= objToAnim.Length; i++) {
+            for (int i = 0; i < objToAnim.Length; i++) {
                 
                 objToAnim[i].GetComponent<Animation>().Play();
                 soundActivator.SetActive(true);
