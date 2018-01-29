@@ -20,16 +20,12 @@ public class soundManager : MonoBehaviour {
 
     IEnumerator waitSound()
     {
-        yield return new WaitForSeconds(3.2f);
-        
-    }
-
-    void Update () {
+        yield return new WaitForSeconds(6);
         if (activateDialogue)
         {
             myText[sound].SetActive(true);
             myAudioSource[sound].SetActive(true);
-        
+
 
             if (!myAudio[sound].isPlaying)
             {
@@ -38,14 +34,20 @@ public class soundManager : MonoBehaviour {
                 myAudio[sound].Stop();
                 StartCoroutine(waitSound());
 
-                if(sound == myAudio.Length - 1)
+                if (sound == myAudio.Length - 1)
                 {
                     activateDialogue = false;
-                }else
+                }
+                else
                 {
                     sound++;
                 }
             }
-        }       	
+        }
+
+    }
+
+    void Update () {
+        StartCoroutine(waitSound());
 	}
 }
