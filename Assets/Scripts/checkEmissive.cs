@@ -11,6 +11,7 @@ public class checkEmissive : MonoBehaviour {
     public GameObject deact;
     public GameObject actDoor;
     public GameObject deactDoor;
+    public GameObject soundManager;
     bool checkA;
     bool checkB;
     bool checkC;
@@ -34,6 +35,7 @@ public class checkEmissive : MonoBehaviour {
             deactDoor.SetActive(false);
             actDoor.GetComponent<Animation>().Play();
             isPlaying = true;
+            soundManager.SetActive(true);
         }
 	}
 }

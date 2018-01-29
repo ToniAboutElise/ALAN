@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class soundManager : MonoBehaviour {
 
-    public string name;
+    public int secondsToWait;
     public GameObject[] myText;
     public GameObject[] myAudioSource;
     public AudioSource[] myAudio;
     int sound;
     bool activateDialogue;
     public GameObject deact;
+    
 
     void Start()
     {
-        activateDialogue = true; //this must be false on start
+        activateDialogue = true;
         sound = 0;
     }
 
     IEnumerator waitSound()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(secondsToWait);
         if (activateDialogue)
         {
             myText[sound].SetActive(true);
             myAudioSource[sound].SetActive(true);
-
-
             if (!myAudio[sound].isPlaying)
             {
                 myText[sound].SetActive(false);
                 myAudioSource[sound].SetActive(false);
                 myAudio[sound].Stop();
-                StartCoroutine(waitSound());
 
                 if (sound == myAudio.Length - 1)
                 {
