@@ -8,9 +8,11 @@ public class soundManager : MonoBehaviour {
     public GameObject[] myText;
     public GameObject[] myAudioSource;
     public AudioSource[] myAudio;
+    public GameObject actSquares;
     int sound;
     bool activateDialogue;
     public GameObject deact;
+    public GameObject act;
     
 
     void Start()
@@ -35,6 +37,9 @@ public class soundManager : MonoBehaviour {
                 if (sound == myAudio.Length - 1)
                 {
                     activateDialogue = false;
+                    //actSquares.SetActive(true);
+                    act.GetComponent<startManager>().act = true;
+
                 }
                 else
                 {
