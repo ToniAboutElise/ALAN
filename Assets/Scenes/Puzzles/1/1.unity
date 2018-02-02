@@ -3619,8 +3619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Adelante. Recuerda ajustar los par\xE1metros como acordamos. No queremos
-    volver a tener ning\xFAn accidente, el sistema accede directamente al cerebro."
+  m_Text: 
 --- !u!222 &33473504
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9001,7 +9000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &279984534
 Transform:
   m_ObjectHideFlags: 0
@@ -9017,7 +9016,7 @@ Transform:
   - {fileID: 1836498792}
   - {fileID: 1045578243}
   m_Father: {fileID: 332355909}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286768978
 GameObject:
@@ -9301,6 +9300,35 @@ Transform:
   m_Father: {fileID: 1364163681}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &312919672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 312919673}
+  m_Layer: 0
+  m_Name: TextAppearManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &312919673
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312919672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 429121352}
+  m_Father: {fileID: 332355909}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &313622484
 Prefab:
   m_ObjectHideFlags: 0
@@ -9514,8 +9542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xBFDe veras crees que va a funcionar, Dorian? Conf\xEDo en tu criterio,
-    pero no debes cegarte por tu objetivo. S\xE9 precavido."
+  m_Text: 
 --- !u!222 &326692124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9548,6 +9575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1446991142}
+  - {fileID: 312919673}
   - {fileID: 279984534}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -9599,7 +9627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &343234980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11055,6 +11083,63 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1494875655}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &429121350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 429121352}
+  - component: {fileID: 429121351}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &429121351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429121350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c36c4eb2da66be4d9a5f81756676d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearText:
+  - "Ya est\xE1, al fin en la c\xE1psula. El experimento puede empezar."
+  - "\xBFDe veras crees que va a funcionar, Dorian? Conf\xEDo en tu criterio, pero
+    no debes cegarte por tu objetivo. S\xE9 precavido."
+  - "Tranquilo, Nigel, est\xE1 todo bajo control. No lo har\xEDa si no estuviese seguro."
+  - "De acuerdo, conf\xEDo en ti. Ya est\xE1 todo listo \xBFEmpezamos la primera fase
+    de estimulaci\xF3n del sujeto?"
+  - "Adelante. Recuerda ajustar los par\xE1metros como acordamos. No queremos volver
+    a tener ning\xFAn accidente, el sistema accede directamente al cerebro."
+  myText:
+  - {fileID: 1517105066}
+  - {fileID: 326692123}
+  - {fileID: 1675792605}
+  - {fileID: 596771082}
+  - {fileID: 33473503}
+  timeToWait: 0400000004000000040000000400000007000000
+  act: {fileID: 1446991141}
+--- !u!4 &429121352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429121350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 125.51758, y: 41.25, z: 37.09375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 312919673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433480587
@@ -18512,7 +18597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &542192219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18980,8 +19065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "De acuerdo, conf\xEDo en ti. Ya est\xE1 todo listo \xBFEmpezamos la primera
-    fase de estimulaci\xF3n del sujeto?"
+  m_Text: 
 --- !u!222 &596771083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19470,7 +19554,7 @@ Transform:
   - {fileID: 265735480}
   - {fileID: 489395423}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 90.00001}
 --- !u!1001 &683116621
 Prefab:
@@ -23619,7 +23703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &763233941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25453,12 +25537,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958275324}
-  m_LocalRotation: {x: 0, y: 0.04324102, z: 0, w: 0.9990647}
-  m_LocalPosition: {x: 480.8, y: 133.35034, z: 60.19}
+  m_LocalRotation: {x: 0.2518098, y: -0.48477373, z: -0.14798842, w: -0.8244305}
+  m_LocalPosition: {x: -116.97748, y: -345.4615, z: -31.530518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959787141
 GameObject:
@@ -35520,7 +35604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ya est\xE1, al fin en la c\xE1psula. El experimento puede empezar."
+  m_Text: 
 --- !u!222 &1517105067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39646,8 +39730,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tranquilo, Nigel, est\xE1 todo bajo control. No lo har\xEDa si no estuviese
-    seguro."
+  m_Text: 
 --- !u!222 &1675792606
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40376,7 +40459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1774536356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41398,7 +41481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1929839966
 RectTransform:
   m_ObjectHideFlags: 0
