@@ -8,6 +8,7 @@ public class textAppear : MonoBehaviour {
     public string[] appearText;
     public Text[] myText;
     public int[] timeToWait;
+    public AudioSource beep;
 
     public GameObject act;
     public GameObject background;
@@ -26,6 +27,7 @@ public class textAppear : MonoBehaviour {
         foreach (char letter in appearText[i].ToCharArray())
         {
             myText[i].text += letter;
+            beep.Play();
             yield return new WaitForSeconds(0.01f);
         }
 
@@ -33,11 +35,11 @@ public class textAppear : MonoBehaviour {
         {
             yield return new WaitForSeconds(timeToWait[i]);
             myText[i].text = "";
-            yield return new WaitForSeconds(2);
+            }  
         }
-    }
-        act.GetComponent<startManager>().act = true;
         background.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        act.GetComponent<startManager>().act = true;
     }
 
 
