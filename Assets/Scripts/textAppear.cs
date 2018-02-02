@@ -10,15 +10,19 @@ public class textAppear : MonoBehaviour {
     public int[] timeToWait;
 
     public GameObject act;
+    public GameObject background;
 
     void Start()
     {
+        background.SetActive(false);
         StartCoroutine(Typing());
     }
 
     IEnumerator Typing()
     {
-        for(int i = 0; i < myText.Length; i++) { 
+        yield return new WaitForSeconds(2);
+        background.SetActive(true);
+        for (int i = 0; i < myText.Length; i++) { 
         foreach (char letter in appearText[i].ToCharArray())
         {
             myText[i].text += letter;
@@ -33,7 +37,7 @@ public class textAppear : MonoBehaviour {
         }
     }
         act.GetComponent<startManager>().act = true;
-
+        background.SetActive(false);
     }
 
 
