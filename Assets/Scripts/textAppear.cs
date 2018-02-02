@@ -28,7 +28,7 @@ public class textAppear : MonoBehaviour {
         {
             myText[i].text += letter;
             beep.Play();
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.04f);
         }
 
         if (myText[i].text == appearText[i])
