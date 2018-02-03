@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Island.unity
-    guid: ba358c7cb9d35db429fc62921e04ea23
-  - enabled: 0
-    path: Assets/Scenes/introGrave.unity
-    guid: b7dbbdb9f5a44804380288588558a573
   - enabled: 1
-    path: Assets/Scenes/Puzzles/1/1.unity
+    path: Assets/Scenes/Puzzles/Menu/menu.unity
+    guid: e45e5a89ae2616f47bce842c8819bf24
+  - enabled: 1
+    path: Assets/Scenes/Puzzles/1/Level1.unity
     guid: f169001536e719b41b088c2e68cbfbd6
