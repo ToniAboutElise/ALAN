@@ -10,7 +10,8 @@ public class resizeObject : MonoBehaviour {
 
     public int maxSize;
     float minSize;
-    
+
+    public GameObject UI;
 
     bool resize;
 
@@ -22,6 +23,11 @@ public class resizeObject : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
+        if (other.tag == "interactArea")
+        {
+            UI.SetActive(true);
+        }
+
         if (other.tag == "interactArea" && Input.GetMouseButton(0) && resize)
         {
                 transform.localScale += new Vector3(Xsize * Time.deltaTime, Ysize * Time.deltaTime, Zsize * Time.deltaTime);
@@ -40,4 +46,13 @@ public class resizeObject : MonoBehaviour {
 
 
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "interactArea")
+        {
+            UI.SetActive(false);
+        }
+    }
+
 }

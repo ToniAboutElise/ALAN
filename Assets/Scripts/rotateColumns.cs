@@ -8,6 +8,8 @@ public class rotateColumns : MonoBehaviour
     public int Yrotation;
     public int Zrotation;
 
+    public GameObject UI;
+
     public GameObject[] columnToRotate;
     public GameObject columnToRotateInvert;
 
@@ -15,6 +17,11 @@ public class rotateColumns : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        if (other.tag == "interactArea")
+        {
+            UI.SetActive(true);
+        }
+
         if (other.name == "collisionDoor")
         {
             GetComponent<BoxCollider>().enabled = false;
@@ -46,5 +53,14 @@ public class rotateColumns : MonoBehaviour
         }
 
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "interactArea")
+        {
+            UI.SetActive(false);
+        }
+    }
+
 }
 

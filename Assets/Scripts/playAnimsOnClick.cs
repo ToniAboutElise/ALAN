@@ -8,6 +8,7 @@ public class playAnimsOnClick : MonoBehaviour {
     public GameObject objToAct;
     public GameObject objToDeact;
     public GameObject soundActivator;
+    public GameObject UI;
 
     public bool openDoor;
     bool notAnim;
@@ -19,7 +20,13 @@ public class playAnimsOnClick : MonoBehaviour {
 	
 	void OnTriggerStay(Collider other)
     {
-        if(other.tag == "interactArea" && Input.GetMouseButton(0) && !notAnim){
+
+        if (other.tag == "interactArea")
+        {
+            UI.SetActive(true);
+        }
+
+        if (other.tag == "interactArea" && Input.GetMouseButton(0) && !notAnim){
             if (openDoor)
             {
                 objToAct.SetActive(true);
@@ -34,4 +41,13 @@ public class playAnimsOnClick : MonoBehaviour {
             }
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "interactArea")
+        {
+            UI.SetActive(false);
+        }
+    }
+
 }
