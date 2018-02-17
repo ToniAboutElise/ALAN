@@ -33,7 +33,7 @@ public class moveAlong : MonoBehaviour {
     void Update()
     {
         theBool = objToMove.GetComponent<setBool>().myBool;
-        Debug.Log(theBool);
+        //Debug.Log(theBool);
     }
 
     void OnTriggerStay(Collider other)

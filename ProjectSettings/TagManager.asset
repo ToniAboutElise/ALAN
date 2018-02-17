@@ -13,6 +13,7 @@ TagManager:
   - trigger2
   - trigger3
   - trigger4
+  - floor
   layers:
   - Default
   - TransparentFX
