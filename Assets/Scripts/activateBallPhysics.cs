@@ -20,7 +20,7 @@ public class activateBallPhysics : MonoBehaviour {
 
     void Update()
     {
-        ballIsOn = ball.GetComponent<ballState>().isOn = true;
+        ballIsOn = ball.GetComponent<ballState>().isOn;
     }
 
     void OnTriggerStay(Collider other)
@@ -31,7 +31,7 @@ public class activateBallPhysics : MonoBehaviour {
             UI.SetActive(true);
         }
 
-        if (other.tag == "interactArea" && Input.GetMouseButton(0) && ballIsOn)
+        if (other.tag == "interactArea" && Input.GetMouseButton(0) && !ballIsOn)
         {
             anim.Play();
             ball.SetActive(true);

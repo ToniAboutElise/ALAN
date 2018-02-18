@@ -17,11 +17,12 @@ public class ballState : MonoBehaviour {
     {
         fx.Play();
         gameObject.GetComponent<MeshRenderer>().enabled = false;
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.9f);
         fx.Stop();
         gameObject.SetActive(false);
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         gameObject.transform.position = rePos.transform.position;
+        isOn = false;
 
     }
 
@@ -31,7 +32,6 @@ public class ballState : MonoBehaviour {
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ
                                                               | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-            isOn = false;
             StartCoroutine(Particles());
         }
     }
