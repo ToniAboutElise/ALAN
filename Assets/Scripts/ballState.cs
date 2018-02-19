@@ -28,7 +28,7 @@ public class ballState : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other)
     {
-        if(other.collider.tag == "floor")
+        if(other.collider.tag == "floor" || other.collider.tag == "Player")
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ
                                                               | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
