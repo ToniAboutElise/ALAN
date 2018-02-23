@@ -6,6 +6,7 @@ public class ballActivatesBall : MonoBehaviour {
 
     public GameObject ballToDeact;
     public GameObject[] ballToAct;
+    public GameObject myBallManager;
 
     void OnCollisionEnter(Collision other)
     {
@@ -16,6 +17,8 @@ public class ballActivatesBall : MonoBehaviour {
             {
                 ballToAct[i].SetActive(true);
             }
+            myBallManager.GetComponent<ballManager>().totalCount += 1;
+            myBallManager.GetComponent<ballManager>().dialogue += 1;
             ballToDeact.SetActive(false);
         }
     }
