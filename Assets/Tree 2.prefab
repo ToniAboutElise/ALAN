@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193902512846150760}
   - component: {fileID: 33119684032274782}
   - component: {fileID: 23855578149126660}
+  - component: {fileID: 65768199392052404}
   m_Layer: 0
   m_Name: Tree 2
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1572741795085520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.2279017, y: 2.2279027, z: 2.2279027}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -137,7 +138,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 21144135482588356}
+  - {fileID: 2100000, guid: 6acc1795d5b294643803d3592600dda5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,6 +292,18 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!65 &65768199392052404
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1572741795085520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.1377134, y: 10.386795, z: 4.695814}
+  m_Center: {x: -0.105519004, y: 5.1933975, z: -0.11340403}
 --- !u!114 &114772818032289188
 MonoBehaviour:
   m_ObjectHideFlags: 0
