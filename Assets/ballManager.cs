@@ -6,11 +6,14 @@ public class ballManager : MonoBehaviour {
 
     public int totalCount;
     public int dialogue;
+    int dialogueNumber;
+    public GameObject[] triggerDialogues;
 
     void Start()
     {
         totalCount = 0;
         dialogue = 0;
+        dialogueNumber = 0;
     }
 
     void Update()
@@ -22,7 +25,8 @@ public class ballManager : MonoBehaviour {
 
         if(dialogue == 2)
         {
-            //trigger dialogue every 2 balls activated
+            triggerDialogues[dialogueNumber].SetActive(true);
+            dialogueNumber++;
             dialogue = 0;
         }
     }

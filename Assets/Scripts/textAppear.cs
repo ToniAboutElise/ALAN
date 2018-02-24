@@ -6,7 +6,7 @@ using UnityEngine;
 public class textAppear : MonoBehaviour {
 
     public string[] appearText;
-    public Text[] myText;
+    public Text myText;
     public int[] timeToWait;
     public AudioSource beep;
 
@@ -23,18 +23,18 @@ public class textAppear : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         background.SetActive(true);
-        for (int i = 0; i < myText.Length; i++) { 
+        for (int i = 0; i < appearText.Length; i++) { 
         foreach (char letter in appearText[i].ToCharArray())
         {
-            myText[i].text += letter;
+            myText.text += letter;
             beep.Play();
             yield return new WaitForSeconds(0.03f);
         }
 
-        if (myText[i].text == appearText[i])
+        if (myText.text == appearText[i])
         {
             yield return new WaitForSeconds(timeToWait[i]);
-            myText[i].text = "";
+            myText.text = "";
             }  
         }
         background.SetActive(false);
