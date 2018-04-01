@@ -57,6 +57,23 @@ public class moveAlong : MonoBehaviour {
             }
 
         }
+
+        if (other.tag == "interactArea" && Input.GetMouseButton(1))
+        {
+            transform.Rotate(-Xrotation * Time.deltaTime, -Yrotation * Time.deltaTime, -Zrotation * Time.deltaTime);
+
+
+            if (!theBool)
+            {
+                objToMove.transform.position = new Vector3(objToMove.transform.position.x - Xmove, objToMove.transform.position.y - Ymove, objToMove.transform.position.z - Zmove);
+            }
+            else if (theBool)
+            {
+                objToMove.transform.position = new Vector3(objToMove.transform.position.x + Xmove, objToMove.transform.position.y + Ymove, objToMove.transform.position.z + Zmove);
+            }
+
+        }
+
     }
 
     void OnTriggerExit(Collider other)

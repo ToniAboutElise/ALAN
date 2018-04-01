@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.27710247, g: 0.42476186, b: 0.33360362, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5759,6 +5759,9 @@ Transform:
   m_Children:
   - {fileID: 2052983134}
   - {fileID: 1712928369}
+  - {fileID: 439309663}
+  - {fileID: 896020748}
+  - {fileID: 870582081}
   m_Father: {fileID: 1557357135}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7329,6 +7332,59 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 429828077}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &439309662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 439309663}
+  - component: {fileID: 439309664}
+  m_Layer: 0
+  m_Name: Dialogue3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &439309663
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439309662}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000058, y: 1.0000058, z: 1.0000058}
+  m_Children: []
+  m_Father: {fileID: 254890433}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439309664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439309662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c36c4eb2da66be4d9a5f81756676d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearText:
+  - "Estoy contactando con mis asesores, Nigel. Esperar\xE9 a su respuesta antes de
+    tomar una decisi\xF3n."
+  - "Mantengamos la calma y centr\xE9monos en el chico."
+  - "S\xED, es la mejor opci\xF3n. Est\xE1 claro que no vamos a encontrar nada en
+    esta zona, pero podemos ir controlando la respuesta de su cerebro."
+  - "En efecto, est\xE1 liberando endorfinas. No hay duda de que esto es algo que
+    le hace feliz."
+  myText: {fileID: 104291683}
+  timeToWait: 02000000030000000400000004000000
+  beep: {fileID: 1743810667}
+  act: {fileID: 0}
+  background: {fileID: 205393577}
 --- !u!1001 &453130411
 Prefab:
   m_ObjectHideFlags: 0
@@ -13402,6 +13458,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865544020}
   m_Mesh: {fileID: 4300010, guid: db0e28cd62920324b82dffb9a52f8126, type: 3}
+--- !u!1 &870582080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 870582081}
+  - component: {fileID: 870582082}
+  m_Layer: 0
+  m_Name: Dialogue5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &870582081
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870582080}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000058, y: 1.0000058, z: 1.0000058}
+  m_Children: []
+  m_Father: {fileID: 254890433}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870582082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870582080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c36c4eb2da66be4d9a5f81756676d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearText:
+  - "Est\xE1s dispuesto a llegar hasta l\xEDmites todav\xEDa m\xE1s insospechados
+    para ello. Lo s\xE9."
+  - "Es lo \xFAnico que me queda en la vida, ella, mi peque\xF1a."
+  - Me preocupas, Dorian. Has destruido mucho, intenta no destruirte a ti mismo.
+  myText: {fileID: 104291683}
+  timeToWait: 020000000300000004000000
+  beep: {fileID: 1743810667}
+  act: {fileID: 0}
+  background: {fileID: 205393577}
 --- !u!1 &873310534
 GameObject:
   m_ObjectHideFlags: 0
@@ -13576,6 +13682,60 @@ Transform:
   m_Father: {fileID: 391006416}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &896020747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 896020748}
+  - component: {fileID: 896020749}
+  m_Layer: 0
+  m_Name: Dialogue4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &896020748
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896020747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000058, y: 1.0000058, z: 1.0000058}
+  m_Children: []
+  m_Father: {fileID: 254890433}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &896020749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896020747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c36c4eb2da66be4d9a5f81756676d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearText:
+  - "Dorian, s\xE9 que no quieres hablar de ello... pero no soy un trabajador m\xE1s,
+    soy tu amigo. Quiero que hablemos de lo que t\xFA ya sabes."
+  - "Nigel... sabes que no hay nada de qu\xE9 hablar. Sabes perfectamente lo que sucede."
+  - "S\xE9 lo que haces de madrugada. Tus intenciones son buenas, pero \xBFhasta d\xF3nde
+    est\xE1s dispuesto a llegar?"
+  - "\xBFAs\xED que me has visto levantarme a las 2:15? Tampoco soy muy discreto al
+    hacerlo. Es la hora en la que naci\xF3. Siempre le leo su cuento favorito. Es
+    un poco mayor para ello, pero me hace sentirla m\xE1s cerca."
+  myText: {fileID: 104291683}
+  timeToWait: 02000000030000000400000004000000
+  beep: {fileID: 1743810667}
+  act: {fileID: 0}
+  background: {fileID: 205393577}
 --- !u!1001 &907383782
 Prefab:
   m_ObjectHideFlags: 0
@@ -28569,14 +28729,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1224007856944732, guid: c128a2b4ae69eb84da14179835d0d386, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602420717416692, guid: c128a2b4ae69eb84da14179835d0d386, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 20.514002
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c128a2b4ae69eb84da14179835d0d386, type: 2}
   m_IsPrefabParent: 0
@@ -30899,10 +31051,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appearText:
-  - LOS POLLOS MARRANOS
-  - AIIIIIII GREGOOOOOOOOORIAAAAAA
-  - PECKAM ES BASURAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaAAAAAAA
-  - TITITIIRIRITITITITIRIRIITITIRIRIRI
+  - "Dorian, esto no me gusta nada. \xC9chale un ojo a la ficha del chico."
+  - "D\xE9jame ver... \xBF\xA1Qu\xE9!? \xBF\xA1Te das cuenta de lo que hemos hecho!?"
+  - "En efecto, hemos cometido un terrible error. El chico hab\xEDa sido adoptado
+    hace 7 a\xF1os. Probablemente fue a visitar a sus antiguos compa\xF1eros que a
+    d\xEDa de hoy no hab\xEDan sido adoptados."
+  - "Los padres le estar\xE1n buscando. Esto... esto no puede estar pasando. Hay que
+    pensar un plan."
   myText: {fileID: 104291683}
   timeToWait: 02000000030000000400000004000000
   beep: {fileID: 1743810667}
@@ -32934,6 +33089,9 @@ MonoBehaviour:
   triggerDialogues:
   - {fileID: 2052983133}
   - {fileID: 1712928368}
+  - {fileID: 439309662}
+  - {fileID: 896020747}
+  - {fileID: 870582080}
 --- !u!4 &1911311073
 Transform:
   m_ObjectHideFlags: 0
@@ -34206,10 +34364,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appearText:
-  - Hola hijos de puta, pu pu pu pu puta
-  - "Que paza illo ni coh\xE9 una raketa z\xE9, HULIO"
-  - OLE OLE OLE CHOLO SIMEONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEPENEEEEEEEEEE
-  - CON ALEGROIIIIIIIAAJAAAA
+  - "\xBFUna zona para skaters? Deber\xEDan ser recuerdos del orfanato, esto no tiene
+    sentido."
+  - "\xBFA lo mejor se escapaba con sus compa\xF1eros para ir aqu\xED?"
+  - "Quiz\xE1s... pero vamos a ser un poco precavidos. Encuentra su ficha del orfanato,
+    el Estado tiene archivada esa informaci\xF3n."
+  - Me pongo manos a la obra.
   myText: {fileID: 104291683}
   timeToWait: 02000000030000000400000004000000
   beep: {fileID: 1743810667}

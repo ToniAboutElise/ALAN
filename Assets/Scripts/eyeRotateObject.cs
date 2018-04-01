@@ -36,6 +36,14 @@ public class eyeRotateObject : MonoBehaviour {
             objRotate.transform.Rotate(XobjRot * Time.deltaTime, YobjRot * Time.deltaTime, ZobjRot * Time.deltaTime);
 
         }
+
+        if (other.tag == "interactArea" && Input.GetMouseButton(1))
+        {
+            transform.Rotate(-XRot * Time.deltaTime, -YRot * Time.deltaTime, -ZRot * Time.deltaTime);
+
+            objRotate.transform.Rotate(-XobjRot * Time.deltaTime, -YobjRot * Time.deltaTime, -ZobjRot * Time.deltaTime);
+
+        }
     }
 
     void OnTriggerExit(Collider other)
