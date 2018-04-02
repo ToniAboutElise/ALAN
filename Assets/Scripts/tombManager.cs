@@ -5,7 +5,7 @@ using UnityEngine;
 public class tombManager : MonoBehaviour {
 
     public GameObject[] tomb;
-    bool tombsDone;
+    public bool tombsDone;
     int tombCount;
 
     void Start()
