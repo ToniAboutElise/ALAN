@@ -7,6 +7,7 @@ public class animateOnTriggerEnter : MonoBehaviour {
     public GameObject objToAnimate;
     public GameObject objToAct;
     public GameObject objToDeact;
+    public GameObject wallToAct;
     bool hasEntered;
     public bool afterTrigger;
     public string animToPlay;
@@ -24,8 +25,9 @@ public class animateOnTriggerEnter : MonoBehaviour {
             objToAnimate.GetComponent<Animation>().Play(animToPlay);
             if (afterTrigger)
             {
-                    objToAct.SetActive(true);
-                    objToDeact.SetActive(false);
+                objToAct.SetActive(true);
+                objToDeact.SetActive(false);
+                wallToAct.SetActive(true);
             }
         }
     }
