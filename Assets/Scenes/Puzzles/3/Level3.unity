@@ -6563,17 +6563,17 @@ GameObject:
   m_Component:
   - component: {fileID: 420953419}
   - component: {fileID: 420953423}
-  - component: {fileID: 420953422}
   - component: {fileID: 420953421}
   - component: {fileID: 420953420}
   - component: {fileID: 420953424}
+  - component: {fileID: 420953422}
   m_Layer: 0
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &420953419
 Transform:
   m_ObjectHideFlags: 0
@@ -6634,8 +6634,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &420953422
-MeshCollider:
+--- !u!65 &420953422
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6644,10 +6644,8 @@ MeshCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 0.0000009536743, z: 0}
 --- !u!33 &420953423
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18326,7 +18324,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074937475}
   m_LocalRotation: {x: -4.2206234e-12, y: 1, z: 0.0000014603137, w: 0.0000029504295}
-  m_LocalPosition: {x: -113.98909, y: -136.10004, z: 424.2}
+  m_LocalPosition: {x: -113.98909, y: -136.10004, z: 427.99}
   m_LocalScale: {x: 14.235233, y: 17.899206, z: 17.899206}
   m_Children:
   - {fileID: 85449779}
@@ -29897,6 +29895,7 @@ MonoBehaviour:
   objToAct: {fileID: 690524897}
   objToDeact: {fileID: 438205261}
   wallToAct: {fileID: 1074937475}
+  activatorToAct: {fileID: 420953418}
   afterTrigger: 1
   animToPlay: doorEnd
 --- !u!54 &1757561210

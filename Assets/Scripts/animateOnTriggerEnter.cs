@@ -8,6 +8,7 @@ public class animateOnTriggerEnter : MonoBehaviour {
     public GameObject objToAct;
     public GameObject objToDeact;
     public GameObject wallToAct;
+    public GameObject activatorToAct;
     bool hasEntered;
     public bool afterTrigger;
     public string animToPlay;
@@ -28,6 +29,7 @@ public class animateOnTriggerEnter : MonoBehaviour {
                 objToAct.SetActive(true);
                 objToDeact.SetActive(false);
                 wallToAct.SetActive(true);
+                activatorToAct.SetActive(true);
             }
         }
     }
