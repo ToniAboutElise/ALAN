@@ -25,6 +25,14 @@ public class fadeOut : MonoBehaviour {
         alpha = true;
         yield return new WaitForSeconds(actCharacterTime);
         Character.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+        StopCoroutine(fadeNow());
+    }
+
+    IEnumerator lockBool()
+    {
+        yield return new WaitForSeconds(5);
+        alpha = false;
+        StopCoroutine(lockBool());
     }
 
     void Update()
@@ -32,6 +40,9 @@ public class fadeOut : MonoBehaviour {
      if(image.color.a != 0 && alpha == true)
         {
             image.color = new Color(image.color.r, image.color.b, image.color.g, image.color.a - minus);
-        }   
+            StartCoroutine(lockBool());
+        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
