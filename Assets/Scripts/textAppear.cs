@@ -12,6 +12,8 @@ public class textAppear : MonoBehaviour {
 
     public GameObject act;
     public GameObject background;
+    public bool actObject;
+    public GameObject objToAct;
 
     void Start()
     {
@@ -39,7 +41,12 @@ public class textAppear : MonoBehaviour {
         }
         background.SetActive(false);
         yield return new WaitForSeconds(0.5f);
+        if (actObject == true)
+        {
+            objToAct.SetActive(true);
+        }
         act.GetComponent<startManager>().act = true;
+        
     }
 
 

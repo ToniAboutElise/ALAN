@@ -6,7 +6,9 @@ public class actDeactOnLook : MonoBehaviour {
 
     public GameObject objToAct;
     public GameObject objToDeact;
+    public GameObject soundToAct;
     bool done;
+    public GameObject soundActivator;
     public GameObject myCharacter;
 
     void Start()
@@ -21,6 +23,7 @@ public class actDeactOnLook : MonoBehaviour {
             objToDeact.SetActive(false);
             objToAct.SetActive(true);
             done = true;
+            soundActivator.GetComponent<soundActivator>().currInt += 1;
         }
     }
 
