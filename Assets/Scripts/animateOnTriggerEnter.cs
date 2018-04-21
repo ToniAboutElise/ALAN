@@ -20,7 +20,7 @@ public class animateOnTriggerEnter : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && hasEntered == false)
+        if(other.tag == "interactArea" && hasEntered == false)
         {
             hasEntered = true;
             objToAnimate.GetComponent<Animation>().Play(animToPlay);
