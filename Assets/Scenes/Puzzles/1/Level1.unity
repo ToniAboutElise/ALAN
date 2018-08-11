@@ -8231,6 +8231,8 @@ MonoBehaviour:
   beep: {fileID: 1736168445}
   act: {fileID: 0}
   background: {fileID: 1986271526}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &307870890
 GameObject:
   m_ObjectHideFlags: 0
@@ -8289,8 +8291,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307870890}
-  m_LocalRotation: {x: 0.17373978, y: 0.13836186, z: 0.024680035, w: -0.97471094}
-  m_LocalPosition: {x: 480.31, y: -653.4004, z: -2042.5663}
+  m_LocalRotation: {x: 0.549053, y: 0.118405804, z: 0.0789352, w: -0.8235837}
+  m_LocalPosition: {x: -16.692596, y: -326.7802, z: -70.33229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1364163681}
@@ -8459,7 +8461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &332355909
 Transform:
   m_ObjectHideFlags: 0
@@ -9639,6 +9641,8 @@ MonoBehaviour:
   beep: {fileID: 910631405}
   act: {fileID: 1446991141}
   background: {fileID: 1986271526}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!4 &429121352
 Transform:
   m_ObjectHideFlags: 0
@@ -9732,6 +9736,8 @@ MonoBehaviour:
   beep: {fileID: 1736168445}
   act: {fileID: 0}
   background: {fileID: 1986271526}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &489265441
 GameObject:
   m_ObjectHideFlags: 0
@@ -9827,6 +9833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   act: {fileID: 287504960}
+  actOnInteractArea: 0
 --- !u!1 &489395422
 GameObject:
   m_ObjectHideFlags: 0
@@ -10403,7 +10410,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1737625429
+  randomSeed: -1667582405
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14449,7 +14456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665541459
 Transform:
   m_ObjectHideFlags: 0
@@ -20796,6 +20803,8 @@ MonoBehaviour:
   beep: {fileID: 1736168445}
   act: {fileID: 0}
   background: {fileID: 1986271526}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &1395697015
 GameObject:
   m_ObjectHideFlags: 0
@@ -24696,6 +24705,8 @@ MonoBehaviour:
   beep: {fileID: 1736168445}
   act: {fileID: 0}
   background: {fileID: 1986271526}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1001 &1559325782
 Prefab:
   m_ObjectHideFlags: 0
