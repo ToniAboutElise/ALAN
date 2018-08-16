@@ -10,11 +10,17 @@ public class ballCollidedActivatesObject : MonoBehaviour {
 
    void OnCollisionEnter(Collision other)
     {
-        if(other.collider.tag == "ball")
+        if(other.collider.tag == "ball" && mybridge.GetComponent<bridgeAppear>().ballsActivated == mybridge.GetComponent<bridgeAppear>().ballCount -1)
         {
             act.SetActive(true);
             deact.SetActive(false);
             mybridge.GetComponent<bridgeAppear>().SpawnBridge();
+        }
+        else if (other.collider.tag == "ball" && mybridge.GetComponent<bridgeAppear>().ballsActivated != mybridge.GetComponent<bridgeAppear>().ballCount - 1)
+        {
+            act.SetActive(true);
+            deact.SetActive(false);
+            mybridge.GetComponent<bridgeAppear>().ballsActivated++;
         }
     }
 
