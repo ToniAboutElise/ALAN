@@ -15,22 +15,20 @@ public class bridgeAppear : MonoBehaviour {
 		for(int i = 0; i <= bridgeParts.Length -1; i++)
         {
             bridgeParts[i].fillAmount = 0;
+            bridgeParts[i].GetComponent<BoxCollider>().enabled = false;
         }
         bridgeInt = 0;
     }
 	
-    void Update()
+    public void SpawnBridge()
     {
-        if(test == true)
-        {
-            StartCoroutine(bridge());
-            test = false;
-        }
+        StartCoroutine(bridge());
     }
 
-    IEnumerator bridge() {
+    public IEnumerator bridge() {
         if(bridgeParts[bridgeInt].fillAmount != 1) { 
             bridgeParts[bridgeInt].fillAmount += velocity;
+            bridgeParts[bridgeInt].GetComponent<BoxCollider>().enabled = true;
             yield return new WaitForSeconds(Fillvelocity);
             StartCoroutine(bridge());
         }
