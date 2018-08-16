@@ -426,6 +426,11 @@ Prefab:
       propertyPath: bridgeParts.Array.data[8]
       value: 
       objectReference: {fileID: 1608848604}
+    - target: {fileID: 114437858575743356, guid: 3ce9257aa28800e4cb1be2e66b7632d4,
+        type: 2}
+      propertyPath: test
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ce9257aa28800e4cb1be2e66b7632d4, type: 2}
   m_IsPrefabParent: 0
