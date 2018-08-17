@@ -41,7 +41,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private float m_OldRunSpeed;
 
         // Use this for initialization
         private void Start()
@@ -58,7 +57,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            m_OldRunSpeed = m_RunSpeed;
         }
 
 
@@ -71,8 +69,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
-
-            
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -114,20 +110,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
 
-            //To avoid the player jumping like crazy. Need to work on this
-            /*
-            if (m_CharacterController.isGrounded == false)
-            {
-                if (m_RunSpeed > m_WalkSpeed)
-                {
-                    m_RunSpeed = m_WalkSpeed;
-                }
-                else
-                {
-                    m_RunSpeed = m_OldRunSpeed;
-                }
-            }
-            */
+
             if (m_CharacterController.isGrounded)
             {
                 m_MoveDir.y = -m_StickToGroundForce;
@@ -275,22 +258,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
 
-        public void UnlockPlayer()
-        {
-            m_WalkSpeed = 10f;
-            m_JumpSpeed = 10f;
-            m_MouseLook.XSensitivity = 2;
-            m_MouseLook.YSensitivity = 2;
-        }
-
-        public void LockPlayer()
-        {
-            m_WalkSpeed = 0f;
-            m_JumpSpeed = 0f;
-            m_MouseLook.XSensitivity = 0;
-            m_MouseLook.YSensitivity = 0;
-        }
-
         void OnTriggerStay(Collider other)
         {
             if(other.tag == "interactiveObject" && Input.GetMouseButtonDown(0))
@@ -303,8 +270,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             if(other.tag == "interactiveObject" && Input.GetMouseButton(1))
                 {
-                m_WalkSpeed = 10f;
-                m_JumpSpeed = 10f;
+                    m_WalkSpeed = 10f;
+                    m_JumpSpeed = 10f;
                 m_MouseLook.XSensitivity = 2;
                 m_MouseLook.YSensitivity = 2;
             }
