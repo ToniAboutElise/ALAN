@@ -21,17 +21,18 @@ public class HandMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        nmyRay = new Ray(transform.position, transform.forward * distance);
+        Debug.DrawLine(transform.position, transform.forward * distance, Color.red);
         distanceBodies = Vector3.Distance(transform.position, Alan.transform.position);
-        Debug.Log(distanceBodies);
-        //Debug.Log("one");
-        if (distanceBodies < distance)
-        {
-            //Debug.Log("player detected");
-            killHim = true;
+        print(distanceBodies);
+       
+        if(Physics.Raycast(nmyRay, out rayHit)) { 
+            if (distanceBodies < distance && rayHit.collider.gameObject.tag != "wall")
+            {
+                killHim = true;
 
+            }
         }
-
         if (killHim == true)
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
