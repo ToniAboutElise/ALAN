@@ -30,7 +30,6 @@ public class HandMove : MonoBehaviour
             if (distanceBodies < distance && rayHit.collider.gameObject.tag != "wall")
             {
                 killHim = true;
-
             }
         }
         if (killHim == true)
