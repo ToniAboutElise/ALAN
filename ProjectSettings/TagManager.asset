@@ -15,6 +15,7 @@ TagManager:
   - trigger4
   - floor
   - ball
+  - wall
   layers:
   - Default
   - TransparentFX
