@@ -9,6 +9,7 @@ public class tombManager : MonoBehaviour {
     int tombCount;
     public GameObject doorToOpen;
     bool opened;
+    public StoryText storyText;
 
     void Start()
     {
@@ -23,7 +24,8 @@ public class tombManager : MonoBehaviour {
         if(tombsDone == true && opened == false)
         {
             opened = true;
-            doorToOpen.GetComponent<Animation>().Play();
+            //doorToOpen.GetComponent<Animation>().Play();
+            storyText.PlayTextSquence();
         }
 
         for(int i = 0; i < tomb.Length; i++)
