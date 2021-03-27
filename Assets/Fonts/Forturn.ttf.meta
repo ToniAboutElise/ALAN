@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a4aa99a8d0a4eeb4598572ddf8a2c630
+timeCreated: 1616862326
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Forturn
+  fontNames:
+  - Forturn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 99ea76d5463e1b74c85a876e68e0a079, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
