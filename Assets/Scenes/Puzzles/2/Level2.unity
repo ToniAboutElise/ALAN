@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.27710247, g: 0.42476186, b: 0.33360362, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -402,6 +402,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 63257615}
+  - component: {fileID: 63257616}
   m_Layer: 0
   m_Name: Puzzle_Inflatables
   m_TagString: Untagged
@@ -439,6 +440,20 @@ Transform:
   m_Father: {fileID: 370370863}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63257616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63257614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ac858d0e98d094d88b39f98c8f2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 370370864}
+  storyText: {fileID: 0}
+  targetBallAmount: 0
 --- !u!1 &67079883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,6 +5017,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 1784519645}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -6491,6 +6511,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 456603666}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -6815,8 +6840,9 @@ GameObject:
   m_Component:
   - component: {fileID: 370370863}
   - component: {fileID: 370370862}
+  - component: {fileID: 370370864}
   m_Layer: 0
-  m_Name: skatepark
+  m_Name: SkateparkPuzzlesController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6858,6 +6884,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!114 &370370864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370370861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef86bf6ebb63e4d438cd745624ffba0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exerciseList:
+  - {fileID: 456603666}
+  - {fileID: 1784519645}
+  - {fileID: 63257616}
+  - {fileID: 391006417}
+  - {fileID: 1672822142}
 --- !u!1 &370659514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6937,6 +6980,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 391006416}
+  - component: {fileID: 391006417}
   m_Layer: 0
   m_Name: Puzzle_Bank
   m_TagString: Untagged
@@ -6974,6 +7018,20 @@ Transform:
   m_Father: {fileID: 370370863}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &391006417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391006415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ac858d0e98d094d88b39f98c8f2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 370370864}
+  storyText: {fileID: 0}
+  targetBallAmount: 0
 --- !u!1 &400453545
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,6 +7164,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 63257616}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -7385,6 +7448,8 @@ MonoBehaviour:
   beep: {fileID: 1743810667}
   act: {fileID: 0}
   background: {fileID: 205393577}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1001 &453130411
 Prefab:
   m_ObjectHideFlags: 0
@@ -7478,6 +7543,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 456603665}
+  - component: {fileID: 456603666}
   m_Layer: 0
   m_Name: Puzzle_SkateGrind
   m_TagString: Untagged
@@ -7517,6 +7583,20 @@ Transform:
   m_Father: {fileID: 370370863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &456603666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 456603664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ac858d0e98d094d88b39f98c8f2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 370370864}
+  storyText: {fileID: 0}
+  targetBallAmount: 0
 --- !u!1 &472900255
 GameObject:
   m_ObjectHideFlags: 0
@@ -13508,6 +13588,8 @@ MonoBehaviour:
   beep: {fileID: 1743810667}
   act: {fileID: 0}
   background: {fileID: 205393577}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &873310534
 GameObject:
   m_ObjectHideFlags: 0
@@ -13736,6 +13818,8 @@ MonoBehaviour:
   beep: {fileID: 1743810667}
   act: {fileID: 0}
   background: {fileID: 205393577}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1001 &907383782
 Prefab:
   m_ObjectHideFlags: 0
@@ -13808,6 +13892,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 456603666}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -21289,6 +21378,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 63257616}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -21525,6 +21619,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 1672822142}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -23556,6 +23655,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 391006417}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -30660,6 +30764,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1672822141}
+  - component: {fileID: 1672822142}
   m_Layer: 0
   m_Name: Puzzle_trashCan
   m_TagString: Untagged
@@ -30690,6 +30795,20 @@ Transform:
   m_Father: {fileID: 370370863}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1672822142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1672822140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ac858d0e98d094d88b39f98c8f2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 370370864}
+  storyText: {fileID: 0}
+  targetBallAmount: 0
 --- !u!1 &1674118294
 GameObject:
   m_ObjectHideFlags: 0
@@ -31063,6 +31182,8 @@ MonoBehaviour:
   beep: {fileID: 1743810667}
   act: {fileID: 0}
   background: {fileID: 205393577}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &1723487981
 GameObject:
   m_ObjectHideFlags: 0
@@ -31857,6 +31978,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1784519644}
+  - component: {fileID: 1784519645}
   m_Layer: 0
   m_Name: Puzzle_Halfpipe
   m_TagString: Untagged
@@ -31882,6 +32004,20 @@ Transform:
   m_Father: {fileID: 370370863}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
+--- !u!114 &1784519645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784519643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ac858d0e98d094d88b39f98c8f2701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 370370864}
+  storyText: {fileID: 0}
+  targetBallAmount: 0
 --- !u!1 &1789736499
 GameObject:
   m_ObjectHideFlags: 0
@@ -31984,6 +32120,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 1672822142}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -32283,6 +32424,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 1672822142}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -34070,6 +34216,11 @@ Prefab:
       propertyPath: myBallManager
       value: 
       objectReference: {fileID: 1911311071}
+    - target: {fileID: 114098705797394470, guid: 4b01fd6c731272e46898434dc79730c7,
+        type: 2}
+      propertyPath: exercise
+      value: 
+      objectReference: {fileID: 391006417}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b01fd6c731272e46898434dc79730c7, type: 2}
   m_IsPrefabParent: 0
@@ -34375,6 +34526,8 @@ MonoBehaviour:
   beep: {fileID: 1743810667}
   act: {fileID: 0}
   background: {fileID: 205393577}
+  actObject: 0
+  objToAct: {fileID: 0}
 --- !u!1 &2053047537 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1665461704588856, guid: e15b110e208b8d942b91dba52ceaefd6,
