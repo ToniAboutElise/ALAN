@@ -85,8 +85,8 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 45
-      highPercent: 95
+      lowPercent: 14.964893
+      highPercent: 69.175476
       minLuminance: -5
       maxLuminance: 1
       keyValue: 0.25
@@ -112,12 +112,12 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       tonemapping:
-        tonemapper: 2
-        neutralBlackIn: -0.008
-        neutralWhiteIn: 18.53
-        neutralBlackOut: -0.0501
-        neutralWhiteOut: 10
-        neutralWhiteLevel: 5.3
+        tonemapper: 0
+        neutralBlackIn: 0.1
+        neutralWhiteIn: 19.81
+        neutralBlackOut: -0.09
+        neutralWhiteOut: 4.03
+        neutralWhiteLevel: 20
         neutralWhiteClip: 10
       basic:
         postExposure: 0
