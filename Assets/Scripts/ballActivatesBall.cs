@@ -7,6 +7,7 @@ public class ballActivatesBall : MonoBehaviour {
     public GameObject ballToDeact;
     public GameObject[] ballToAct;
     public GameObject myBallManager;
+    public SkateParkExercise exercise;
 
     void OnCollisionEnter(Collision other)
     {
