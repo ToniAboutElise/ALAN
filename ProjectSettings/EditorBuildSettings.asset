@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzles/3/Level3.unity
     guid: 2f52231962011534297665e5ceb5b35f
+  - enabled: 1
+    path: Assets/Scenes/TransitionScenes/ToSkatePark.unity
+    guid: 860363a1d18321942881cf47393d4e19

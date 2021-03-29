@@ -7,12 +7,12 @@ public class soundActivator : MonoBehaviour {
     public int currInt;
     public int maxInt;
     public GameObject objToAct;
+    public NextLevelTrigger nextLevelTrigger;
 
 	// Use this for initialization
 	void Start () {
         activated = false;
         currInt = 0;
-
     }
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class soundActivator : MonoBehaviour {
 		if(activated == false && currInt == maxInt)
         {
             activated = true;
-            objToAct.SetActive(true);
+            nextLevelTrigger.LoadNextScene();
         }
 	}
 }
