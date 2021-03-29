@@ -8,6 +8,6 @@ public class SkateParkExperienceController : MonoBehaviour {
 
     public void CheckCompletedExercises()
     {
-
+        FindObjectOfType<LevelManager>().NextLevel("");
     }
 }
